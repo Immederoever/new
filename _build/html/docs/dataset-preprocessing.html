@@ -365,33 +365,25 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="dataset-and-preprocessing">
 <h1>Dataset and preprocessing<a class="headerlink" href="#dataset-and-preprocessing" title="Link to this heading">#</a></h1>
-<p>At first, we decided that each team member has to find at least one dataset of
-interest with sufficient data from which at least two perspectives can be
-induced. During the first team call, every dataset was discussed along with
-possible correlations. In the end, we chose the 2014-2022 datasets from the
-<a class="reference external" href="https://insights.stackoverflow.com/survey">Stack Overflow Annual Developer Survey</a>,
-as these datasets have correlations that could be of use for a potential topic.
-After some brainstorming during team meetings, we decided to dive into the world
-of gender pay gaps, as the dataset contains sufficient variables that can be
-used for two perspectives.</p>
+<p>After deciding to explore the correlation between fast food consumption and obesity, 
+  our next step was to find datasets that could reveal correlations from two different 
+  perspectives. We initially looked for relevant datasets with sufficient data to 
+  support our analysis. This was challenging because many of the datasets we reviewed 
+  did not show the expected correlations. Eventually, we chose 8 diverse datasets. More 
+  information about the datasets and the chosen variables can be found below.</p>
 <section id="cleaning">
 <h2>Cleaning<a class="headerlink" href="#cleaning" title="Link to this heading">#</a></h2>
-<p>Each Stack Overflow dataset contains at least some changes compared to other
-years, such as column renaming or structural changes. We had to go through two
-phases in order to clean everything properly. The first phase is where columns
-are renamed and restructured in order to merge them together. Columns have been
-manually merged by inspecting them one by one and merging the ones containing
-roughly the same name or content in terms of what they represent. Columns that
-were not of use were immediately excluded during this process.</p>
-<p>The second phase involves normalising the data. In general, this has been done
-by thoroughly inspecting the unique values for each column and combine values
-that represent similar meaning.</p>
-<p>Finally, we have decided to use parquet <code class="docutils literal notranslate"><span class="pre">.pq</span></code> as the file type for our final
-dataset. This allows us to specify the datatype for each column and decrease the
-overall file size of the final dataset with additional gzip compression. This
-resulted in a 7.2MB parquet file, rather than a 145MB CSV file.</p>
-<p>After all, a total of 955 columns spanning 9 datasets have been reduced to a
-single dataset containing 19 columns and 535,759 rows.</p>
+<p>Each dataset required some modifications, such as renaming columns or making structural changes.</p>
+<p>To make the best use of the selected datasets, we began by thoroughly cleaning and preprocessing them. 
+  Our first step was to rename columns and ensure the state identifiers were consistent across all 
+  datasets; some used state codes while others used full state names, so we standardized them to match. 
+  Next, we decided which variables were relevant to our research and discarded the rest. At this point, 
+  all datasets were ready to be merged.</p>
+<p>After merging, we reorganized some columns to improve the usability of the combined dataset. We 
+  then checked for missing values since some datasets included one or two states not present in others. 
+  These states were removed to maintain consistency, as we only wanted to include states present in all 
+  datasets. With cleaning and preprocessing complete, our dataset was ready for analysis.</p>
+
 </section>
 <section id="variable-descriptions">
 <h2>Variable descriptions<a class="headerlink" href="#variable-descriptions" title="Link to this heading">#</a></h2>
