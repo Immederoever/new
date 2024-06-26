@@ -9,7 +9,7 @@ Here is a list of the feedback provided by the other group and our TA that could
 - Add more detailed descriptions for the graphs and visuals.
 - Reorganize some of the graphs (e.g., place some next to each other) and explore ways to combine multiple variables to create more meaningful graphs.
 
-After the feedback session, we divided the tasks so that each team member had specific feedback point to work on.
+After the feedback session, we divided the tasks so that each team member had a specific feedback point to work on.
 
 ## Self-reflection
 
