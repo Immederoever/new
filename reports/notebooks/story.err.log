@@ -72,7 +72,7 @@ File [0;32m~/miniconda3/envs/jupyterbook/lib/python3.10/site-packages/IPython/c
 
     [0;31m[... skipping hidden 1 frame][0m
 
-File [0;32m/tmp/ipykernel_9037/3548969813.py:9[0m
+File [0;32m/tmp/ipykernel_11204/3548969813.py:9[0m
 [1;32m      6[0m data [38;5;241m=[39m pd[38;5;241m.[39mread_csv(file_path)
 [1;32m      8[0m [38;5;66;03m# Extract the relevant columns: years and obesity percentage[39;00m
 [0;32m----> 9[0m years [38;5;241m=[39m [43mdata[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43mjaar[39;49m[38;5;124;43m'[39;49m[43m][49m
