@@ -8,8 +8,6 @@ We will focus on the connection between obesity rates in the United States and f
 
 Join us as we explore the data to uncover the different factors that influence obesity.
 
-...
-
 [Click here to read the data story](../notebooks/story.ipynb)
 
 **Authors**

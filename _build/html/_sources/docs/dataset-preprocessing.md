@@ -13,12 +13,14 @@ After merging, we reorganized some columns to improve the usability of the combi
 In terms of variable type and measurement scale, the variables in the final
 dataset can be classified under several combinations:
 
-- Continuous / Ratio variables: `Calories`, `Fat`, `Cholesterol`, `Sugar`, `Sodium`, `Average.Income`, 
-`Obesity, total (% adults aged 20 and over)`, `Adult.Obesity*100`, `Unemployment_rate_2015-2019`, 
-`Percent of adults with a bachelor's degree or higher, 2015-19`, `percent_democrat`, `All fast food restaurants`
+- Continuous / Ratio variables: `Calories`, `Fat`, `Cholesterol`, `Sugar`, `Sodium`,
+ `Average.Income`, `Obesity, total (% adults aged 20 and over)`, `Adult.Obesity*100`, 
+ `Unemployment_rate_2015-2019`, `Percent of adults with a bachelor's degree or higher, 2015-19`, 
+ `percent_democrat`, `All fast food restaurants`
 - Discrete / Interval variables: `Year`
 - Discrete / Nominal variables: `State`
 
 Variables that are currently being used are: `Calories`, `Fat`, `Cholesterol`, `Sugar`, `Sodium`,
-`Year`, `Obesity, total (% adults aged 20 and over)`, `State`, `Adult.Obesity*100`, `Average.Income`, `percent_democrat`, 
-`All fast food restaurants`, `Unemployment_rate_2015-2019`, and `Percent of adults with a bachelor's degree or higher, 2015-19`.
+`Year`, `Obesity, total (% adults aged 20 and over)`, `State`, `Adult.Obesity*100`, `Average.Income`, 
+`percent_democrat`, `All fast food restaurants`, `Unemployment_rate_2015-2019`, 
+and `Percent of adults with a bachelor's degree or higher, 2015-19`.
