@@ -58,15 +58,13 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'docs/dataset-preprocessing';</script>
     <script src="../_static/js/enforce-light-theme.js?v=9baa896a"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The different causes of obesity in the USA" href="../notebooks/story.html" />
+    <link rel="next" title="Beyond the Scale: Exploring the Factors Behind Obesity" href="../notebooks/story.html" />
     <link rel="prev" title="Introduction" href="introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -155,8 +153,8 @@
     
     
     
-    <img src="../_static/logo.jpg" class="logo__image only-light" alt="Gender Pay Gap - Home"/>
-    <script>document.write(`<img src="../_static/logo.jpg" class="logo__image only-dark" alt="Gender Pay Gap - Home"/>`);</script>
+    <img src="../_static/logo.jpg" class="logo__image only-light" alt="Beyond the scale - Home"/>
+    <script>document.write(`<img src="../_static/logo.jpg" class="logo__image only-dark" alt="Beyond the scale - Home"/>`);</script>
   
   
 </a></div>
@@ -183,7 +181,7 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Dataset and preprocessing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../notebooks/story.html">The different causes of obesity in the USA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notebooks/story.html">Beyond the Scale: Exploring the Factors Behind Obesity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reflection.html">Reflection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="work-distribution.html">Work distribution</a></li>
 </ul>
@@ -351,7 +349,6 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning">Cleaning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-descriptions">Variable descriptions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregations">Aggregations</a></li>
 </ul>
             </nav>
         </div>
@@ -365,43 +362,30 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="dataset-and-preprocessing">
 <h1>Dataset and preprocessing<a class="headerlink" href="#dataset-and-preprocessing" title="Link to this heading">#</a></h1>
-<p>After deciding to explore the correlation between fast food consumption and obesity, 
-  our next step was to find datasets that could reveal correlations from two different 
-  perspectives. We initially looked for relevant datasets with sufficient data to 
-  support our analysis. This was challenging because many of the datasets we reviewed 
-  did not show the expected correlations. Eventually, we chose 8 diverse datasets. More 
-  information about the datasets and the chosen variables can be found below.</p>
+<p>After deciding to explore the correlation between fast food consumption and obesity, our next step was to find datasets that could reveal correlations from two different perspectives. We initially looked for relevant datasets with sufficient data to support our analysis. This was challenging because many of the datasets we reviewed did not show the expected correlations. Eventually, we chose 8 diverse datasets. More information about the datasets and the chosen variables can be found below.</p>
 <section id="cleaning">
 <h2>Cleaning<a class="headerlink" href="#cleaning" title="Link to this heading">#</a></h2>
 <p>Each dataset required some modifications, such as renaming columns or making structural changes.</p>
-<p>To make the best use of the selected datasets, we began by thoroughly cleaning and preprocessing them. 
-  Our first step was to rename columns and ensure the state identifiers were consistent across all 
-  datasets; some used state codes while others used full state names, so we standardized them to match. 
-  Next, we decided which variables were relevant to our research and discarded the rest. At this point, 
-  all datasets were ready to be merged.</p>
-<p>After merging, we reorganized some columns to improve the usability of the combined dataset. We 
-  then checked for missing values since some datasets included one or two states not present in others. 
-  These states were removed to maintain consistency, as we only wanted to include states present in all 
-  datasets. With cleaning and preprocessing complete, our dataset was ready for analysis.</p>
-
+<p>To make the best use of the selected datasets, we began by thoroughly cleaning and preprocessing them. Our first step was to rename columns and ensure the state identifiers were consistent across all datasets; some used state codes while others used full state names, so we standardized them to match. Next, we decided which variables were relevant to our research and discarded the rest. At this point, all datasets were ready to be merged.</p>
+<p>After merging, we reorganized some columns to improve the usability of the combined dataset. We then checked for missing values since some datasets included one or two states not present in others. These states were removed to maintain consistency, as we only wanted to include states present in all datasets. With cleaning and preprocessing complete, our dataset was ready for analysis.</p>
 </section>
 <section id="variable-descriptions">
 <h2>Variable descriptions<a class="headerlink" href="#variable-descriptions" title="Link to this heading">#</a></h2>
 <p>In terms of variable type and measurement scale, the variables in the final
 dataset can be classified under several combinations:</p>
 <ul class="simple">
-<li><p>Continuous / Ratio variables: <code class="docutils literal notranslate"><span class="pre">YearsCode</span></code>, <code class="docutils literal notranslate"><span class="pre">YearsCodePro</span></code>, <code class="docutils literal notranslate"><span class="pre">Salary</span></code></p></li>
-<li><p>Discrete / Ordinal variables: <code class="docutils literal notranslate"><span class="pre">JobSat</span></code></p></li>
-<li><p>Discrete / Nominal variables: <code class="docutils literal notranslate"><span class="pre">Education</span></code>, <code class="docutils literal notranslate"><span class="pre">OrgSize</span></code>, <code class="docutils literal notranslate"><span class="pre">LastNewJob</span></code>,
-<code class="docutils literal notranslate"><span class="pre">Employment</span></code>, <code class="docutils literal notranslate"><span class="pre">RespondentType</span></code>, <code class="docutils literal notranslate"><span class="pre">JobSeek</span></code>, <code class="docutils literal notranslate"><span class="pre">Gender</span></code>, <code class="docutils literal notranslate"><span class="pre">Student</span></code>, <code class="docutils literal notranslate"><span class="pre">Country</span></code>,
-<code class="docutils literal notranslate"><span class="pre">CodingActivities</span></code>, <code class="docutils literal notranslate"><span class="pre">DevType</span></code>, <code class="docutils literal notranslate"><span class="pre">LearnCodeFrom</span></code>, <code class="docutils literal notranslate"><span class="pre">LangPresent</span></code></p></li>
+<li><p>Continuous / Ratio variables: <code class="docutils literal notranslate"><span class="pre">Calories</span></code>, <code class="docutils literal notranslate"><span class="pre">Fat</span></code>, <code class="docutils literal notranslate"><span class="pre">Cholesterol</span></code>, <code class="docutils literal notranslate"><span class="pre">Sugar</span></code>, <code class="docutils literal notranslate"><span class="pre">Sodium</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Average.Income</span></code>, <code class="docutils literal notranslate"><span class="pre">Obesity,</span> <span class="pre">total</span> <span class="pre">(%</span> <span class="pre">adults</span> <span class="pre">aged</span> <span class="pre">20</span> <span class="pre">and</span> <span class="pre">over)</span></code>, <code class="docutils literal notranslate"><span class="pre">Adult.Obesity*100</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Unemployment_rate_2015-2019</span></code>, <code class="docutils literal notranslate"><span class="pre">Percent</span> <span class="pre">of</span> <span class="pre">adults</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">bachelor's</span> <span class="pre">degree</span> <span class="pre">or</span> <span class="pre">higher,</span> <span class="pre">2015-19</span></code>,
+<code class="docutils literal notranslate"><span class="pre">percent_democrat</span></code>, <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">fast</span> <span class="pre">food</span> <span class="pre">restaurants</span></code></p></li>
 <li><p>Discrete / Interval variables: <code class="docutils literal notranslate"><span class="pre">Year</span></code></p></li>
-<li><p>Discrete / Ratio variables: <code class="docutils literal notranslate"><span class="pre">Age</span></code></p></li>
+<li><p>Discrete / Nominal variables: <code class="docutils literal notranslate"><span class="pre">State</span></code></p></li>
 </ul>
-<p>Variables that are currently being used are: <code class="docutils literal notranslate"><span class="pre">Year</span></code>, <code class="docutils literal notranslate"><span class="pre">Salary</span></code>, <code class="docutils literal notranslate"><span class="pre">YearsCodePro</span></code>,
-<code class="docutils literal notranslate"><span class="pre">Age</span></code>, <code class="docutils literal notranslate"><span class="pre">Education</span></code>, <code class="docutils literal notranslate"><span class="pre">RespondentType</span></code>, <code class="docutils literal notranslate"><span class="pre">Gender</span></code>, <code class="docutils literal notranslate"><span class="pre">Country</span></code> and <code class="docutils literal notranslate"><span class="pre">DevType</span></code>.</p>
+<p>Variables that are currently being used are: <code class="docutils literal notranslate"><span class="pre">Calories</span></code>, <code class="docutils literal notranslate"><span class="pre">Fat</span></code>, <code class="docutils literal notranslate"><span class="pre">Cholesterol</span></code>, <code class="docutils literal notranslate"><span class="pre">Sugar</span></code>, <code class="docutils literal notranslate"><span class="pre">Sodium</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Year</span></code>, <code class="docutils literal notranslate"><span class="pre">Obesity,</span> <span class="pre">total</span> <span class="pre">(%</span> <span class="pre">adults</span> <span class="pre">aged</span> <span class="pre">20</span> <span class="pre">and</span> <span class="pre">over)</span></code>, <code class="docutils literal notranslate"><span class="pre">State</span></code>, <code class="docutils literal notranslate"><span class="pre">Adult.Obesity*100</span></code>, <code class="docutils literal notranslate"><span class="pre">Average.Income</span></code>,
+<code class="docutils literal notranslate"><span class="pre">percent_democrat</span></code>, <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">fast</span> <span class="pre">food</span> <span class="pre">restaurants</span></code>, <code class="docutils literal notranslate"><span class="pre">Unemployment_rate_2015-2019</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">Percent</span> <span class="pre">of</span> <span class="pre">adults</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">bachelor's</span> <span class="pre">degree</span> <span class="pre">or</span> <span class="pre">higher,</span> <span class="pre">2015-19</span></code>.</p>
 </section>
-
 </section>
 
     <script type="text/x-thebe-config">
@@ -448,7 +432,7 @@ dataset can be classified under several combinations:</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The different causes of obesity in the USA</p>
+        <p class="prev-next-title">Beyond the Scale: Exploring the Factors Behind Obesity</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
