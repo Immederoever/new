@@ -1,43 +1,23 @@
 # Work distribution
 
-Our method of communication during this project consisted of seminars
-(werkcolleges), meetings, and additional consultation over text. In our first
-meeting, each team member presented a dataset along with at least two different
-perspectives. We then chose the subject and data that best suited the
-requirements for the project. Our first step after determining the subject was
-to clean and merge the datasets from each year to form one singular dataset, for
-more information, see [Dataset and preprocessing](dataset-preprocessing.md).
-We also started to discuss possible graphs that could be made to support the
-different perspectives. We then started making the graphs and work on a story
-that builds a narrative around them, which led to the our draft version.
-Furthermore, the remaining time has been used to further improve the graphs as
-well as the story. Finally, with the help of the given peer feedback, we created
-the final data story.
+During this project we kept each other updated via WhatsApp, sharing our current tasks and maintaining a to-do list to track completed work, ongoing tasks, and what still needed to be done. Once we descided on the topic we would like to research, we divided the tasks among the team members.
+
+Our first step was to find relevant datasets, followed by preprocessing and cleaning them. With the cleaned and preprocessed data, we created graphs to visualize the correlations between variables to support the two 
+different perspectives. During the project we received peer feedback, which we implemented to improve our project. With the remaining time after the feedback session, we completed the final data story.
 
 
-## Kim
+## Imme
 
-Kim took the responsibility of coordinating the project. He cleaned the subsets
-2014-2016 and merged those with the 2017-2022 subsets (cleaned by Peter) into a
-single 2014-2022 single dataset. He participated in the making of the graphs and
-their associated captions, as well as coming up with the overal design. He was
-also responsible for taking notes during meetings and made a clear overview of
-everyone's responsibilities.
+At the beginning of the project Imme focused on searching for relevant datasets for the project. She also participated in making the graphs to represent the data and was responsible for setting up the URL for our project site.
 
-## Peter
+## Lise
 
-Peter first worked on cleaning the survey years 2017-2022. He then participated
-in making the graphs. Later on in the project, he helped improve the storyline
-together with Wim. Peter also presented the project for peer feedback.
+Lise assisted in looking for useable datasets to use for the project and was responsible for cleaning the data. She also contributed to creating visuals and made sure the project notebook looked visually appealing and consistent.
 
-## Wim
+## Eva
 
-Wim participated in improving the graphs and was mainly responsible for creating
-a strong basis of the storyline. Furthermore, he looked into several research
-papers that support the perspectives and continued to assist on the storyline
-during the project.
+Eva was responsible for continuing the process of cleaning the datasets and merging them. After finishing this task she wrote sections on reflection, dataset and preprocessing, and the work distribution.
 
-## Aize
+## Xavier
 
-Aize contributed to the development of the graphs and presented the project
-during peer feedback. The work distribution was also written by Aize.
+Xavier played a role in writing the project's introduction. Additionally, he was responsible for writing text throughout the project, such as the narrative for the data story and the captions underneath the graphs.
