@@ -354,61 +354,61 @@ document.write(`
 <p>The code below enables a custom theme which can be added to the top of each notebook by adding <code class="docutils literal notranslate"><span class="pre">%run</span> <span class="pre">set_theme.ipynb</span></code>, preferablly as the first cell to keep it consistent.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import plotly.io as pio</span>
 
-<span class="k">if</span> <span class="s1">&#39;custom&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">pio</span><span class="o">.</span><span class="n">templates</span><span class="p">:</span>
-    <span class="n">transparent</span> <span class="o">=</span> <span class="s1">&#39;rgba(0,0,0,0)&#39;</span>
-    <span class="n">bgcolor</span> <span class="o">=</span> <span class="s1">&#39;#fdead4&#39;</span>
-    <span class="n">black</span> <span class="o">=</span> <span class="s1">&#39;#343a42&#39;</span>
-    <span class="n">cyan</span> <span class="o">=</span> <span class="s1">&#39;#4edcda&#39;</span>
-    <span class="n">darkcyan</span> <span class="o">=</span> <span class="s1">&#39;#2b9694&#39;</span>
-    <span class="n">blue</span> <span class="o">=</span> <span class="s1">&#39;#4c75eb&#39;</span>
-    <span class="n">darkblue</span> <span class="o">=</span> <span class="s1">&#39;#3a34b5&#39;</span>
-    <span class="n">pink</span> <span class="o">=</span> <span class="s1">&#39;#ef4de5&#39;</span>
-    <span class="n">purple</span> <span class="o">=</span> <span class="s1">&#39;#a736a0&#39;</span>
-    <span class="n">red</span> <span class="o">=</span> <span class="s1">&#39;#f74e4e&#39;</span>
-    <span class="n">darkred</span> <span class="o">=</span> <span class="s1">&#39;#b33c3c&#39;</span>
-    <span class="n">green</span> <span class="o">=</span> <span class="s1">&#39;#2d8923&#39;</span>
-    <span class="n">darkgreen</span> <span class="o">=</span> <span class="s1">&#39;#2d8923&#39;</span>
-    <span class="n">orange</span> <span class="o">=</span> <span class="s1">&#39;#f7b24e&#39;</span>
-    <span class="n">brown</span> <span class="o">=</span> <span class="s1">&#39;#d8bea1&#39;</span>
+<span class="c1"># if &#39;custom&#39; not in pio.templates:</span>
+<span class="c1">#     transparent = &#39;rgba(0,0,0,0)&#39;</span>
+<span class="c1">#     bgcolor = &#39;#fdead4&#39;</span>
+<span class="c1">#     black = &#39;#343a42&#39;</span>
+<span class="c1">#     cyan = &#39;#4edcda&#39;</span>
+<span class="c1">#     darkcyan = &#39;#2b9694&#39;</span>
+<span class="c1">#     blue = &#39;#4c75eb&#39;</span>
+<span class="c1">#     darkblue = &#39;#3a34b5&#39;</span>
+<span class="c1">#     pink = &#39;#ef4de5&#39;</span>
+<span class="c1">#     purple = &#39;#a736a0&#39;</span>
+<span class="c1">#     red = &#39;#f74e4e&#39;</span>
+<span class="c1">#     darkred = &#39;#b33c3c&#39;</span>
+<span class="c1">#     green = &#39;#2d8923&#39;</span>
+<span class="c1">#     darkgreen = &#39;#2d8923&#39;</span>
+<span class="c1">#     orange = &#39;#f7b24e&#39;</span>
+<span class="c1">#     brown = &#39;#d8bea1&#39;</span>
 
-    <span class="n">pio</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s1">&#39;custom&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pio</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s1">&#39;plotly&#39;</span><span class="p">]</span>
+<span class="c1">#     pio.templates[&#39;custom&#39;] = pio.templates[&#39;plotly&#39;]</span>
 
-    <span class="n">pio</span><span class="o">.</span><span class="n">templates</span><span class="p">[</span><span class="s1">&#39;custom&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-        <span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;bar&#39;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="p">{</span>
-                    <span class="s1">&#39;marker&#39;</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;width&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span>
-                    <span class="p">}</span>
-                <span class="p">}</span>
-            <span class="p">]</span>
-        <span class="p">},</span>
-        <span class="s1">&#39;layout&#39;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="s1">&#39;paper_bgcolor&#39;</span><span class="p">:</span> <span class="n">bgcolor</span><span class="p">,</span>
-            <span class="s1">&#39;plot_bgcolor&#39;</span><span class="p">:</span> <span class="n">transparent</span><span class="p">,</span>
-            <span class="s1">&#39;font&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="n">black</span><span class="p">},</span>
-            <span class="s1">&#39;xaxis&#39;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s1">&#39;zerolinecolor&#39;</span><span class="p">:</span> <span class="n">brown</span><span class="p">,</span>
-                <span class="s1">&#39;gridcolor&#39;</span><span class="p">:</span> <span class="n">brown</span><span class="p">,</span>
-                <span class="s1">&#39;zerolinewidth&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="p">},</span>
-            <span class="s1">&#39;yaxis&#39;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="s1">&#39;zerolinecolor&#39;</span><span class="p">:</span> <span class="n">brown</span><span class="p">,</span>
-                <span class="s1">&#39;gridcolor&#39;</span><span class="p">:</span> <span class="n">brown</span><span class="p">,</span>
-                <span class="s1">&#39;zerolinewidth&#39;</span><span class="p">:</span> <span class="mi">1</span>
-            <span class="p">},</span>    
-           <span class="s1">&#39;colorway&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">black</span><span class="p">,</span> 
-                        <span class="n">cyan</span><span class="p">,</span>     <span class="n">blue</span><span class="p">,</span>     <span class="n">pink</span><span class="p">,</span>   <span class="n">red</span><span class="p">,</span>     <span class="n">green</span><span class="p">,</span>     <span class="n">orange</span><span class="p">,</span>
-                        <span class="n">darkcyan</span><span class="p">,</span> <span class="n">darkblue</span><span class="p">,</span> <span class="n">purple</span><span class="p">,</span> <span class="n">darkred</span><span class="p">,</span> <span class="n">darkgreen</span><span class="p">],</span>
-            <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">},</span>
-            <span class="s1">&#39;annotationdefaults&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;arrowcolor&#39;</span><span class="p">:</span> <span class="n">black</span><span class="p">},</span>
+<span class="c1">#     pio.templates[&#39;custom&#39;].update({</span>
+<span class="c1">#         &#39;data&#39;: {</span>
+<span class="c1">#             &#39;bar&#39;: [</span>
+<span class="c1">#                 {</span>
+<span class="c1">#                     &#39;marker&#39;: {</span>
+<span class="c1">#                         &#39;line&#39;: {&#39;width&#39;: 0},</span>
+<span class="c1">#                     }</span>
+<span class="c1">#                 }</span>
+<span class="c1">#             ]</span>
+<span class="c1">#         },</span>
+<span class="c1">#         &#39;layout&#39;: {</span>
+<span class="c1">#             &#39;paper_bgcolor&#39;: bgcolor,</span>
+<span class="c1">#             &#39;plot_bgcolor&#39;: transparent,</span>
+<span class="c1">#             &#39;font&#39;: {&#39;color&#39;: black},</span>
+<span class="c1">#             &#39;xaxis&#39;: {</span>
+<span class="c1">#                 &#39;zerolinecolor&#39;: brown,</span>
+<span class="c1">#                 &#39;gridcolor&#39;: brown,</span>
+<span class="c1">#                 &#39;zerolinewidth&#39;: 1,</span>
+<span class="c1">#             },</span>
+<span class="c1">#             &#39;yaxis&#39;: {</span>
+<span class="c1">#                 &#39;zerolinecolor&#39;: brown,</span>
+<span class="c1">#                 &#39;gridcolor&#39;: brown,</span>
+<span class="c1">#                 &#39;zerolinewidth&#39;: 1</span>
+<span class="c1">#             },    </span>
+<span class="c1">#            &#39;colorway&#39;: [black, </span>
+<span class="c1">#                         cyan,     blue,     pink,   red,     green,     orange,</span>
+<span class="c1">#                         darkcyan, darkblue, purple, darkred, darkgreen],</span>
+<span class="c1">#             &#39;title&#39;: {&#39;x&#39;: 0.5},</span>
+<span class="c1">#             &#39;annotationdefaults&#39;: {&#39;arrowcolor&#39;: black},</span>
 
-        <span class="p">}</span>
-    <span class="p">})</span>
+<span class="c1">#         }</span>
+<span class="c1">#     })</span>
 
-    <span class="n">pio</span><span class="o">.</span><span class="n">templates</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s1">&#39;custom&#39;</span>
+<span class="c1">#     pio.templates.default = &#39;custom&#39;</span>
 </pre></div>
 </div>
 </div>
