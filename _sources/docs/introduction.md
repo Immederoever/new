@@ -1,5 +1,5 @@
 # Introduction
-For decades, the rise of obesity has been a growing concern around the world, affecting people of all ages and backgrounds. Obesity has become a major health issue, with its causes linked to many different parts of our daily lives. In the United States, 22 states now have obesity rates over 35% (https://www.cdc.gov/media/releases/2023/p0922-adult-obesity.html)
+For decades, the rise of obesity has been a growing concern around the world, affecting people of all ages and backgrounds. Obesity has become a major health issue, with its causes linked to many different parts of our daily lives. In the United States, 22 states now have obesity rates over 35% (CDC Newsroom, 2016)
 
 
 This data story aims to explore the many factors that contribute to obesity using data analysis. By looking at various influences, we hope to understand the complex reasons behind this epidemic. Our data comes from national health surveys and other trusted sources, giving us a strong base for our analysis.
